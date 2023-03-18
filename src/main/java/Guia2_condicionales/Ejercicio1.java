@@ -2,7 +2,7 @@
  * Implementar un programa que dado dos numeros enteros determine cual es el mayor
 y los muestre por pantalla
  */
-package Guia2;
+package Guia2_condicionales;
 
 import java.util.Scanner;
 
