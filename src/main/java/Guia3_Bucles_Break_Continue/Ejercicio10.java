@@ -25,7 +25,7 @@ public class Ejercicio10 {
           
            suma = suma + num;
        }
-         while (suma < limite);  
+         while (suma <= limite);  
        
     }
     
