@@ -19,7 +19,7 @@ public class Ejercicio7 {
        Scanner leer = new Scanner(System.in);
        System.out.println("ingrese una frase");
        String frase = leer.nextLine();
-       if (frase.equals("eureka")){
+       if (frase.equalsIgnoreCase("eureka")){
            System.out.println("CORRECTO");
        }else {
            System.out.println("INCORRECTO");

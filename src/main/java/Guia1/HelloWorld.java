@@ -19,7 +19,7 @@ public class HelloWorld {
     String nombre = leer.nextLine();
     System.out.println("Hola mundo, mi nombre es " + nombre);
     
-   
+    
     }
     
 }
