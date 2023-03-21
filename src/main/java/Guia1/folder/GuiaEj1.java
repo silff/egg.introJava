@@ -8,9 +8,6 @@ package Guia1.folder;
  */
 public class GuiaEj1 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         String nombre = "sil";
         char caracter = 'a';

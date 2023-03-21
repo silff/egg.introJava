@@ -5,10 +5,6 @@ package Guia3_Bucles_Break_Continue;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Silvana
- */
 public class Ejercicio10 {
 
     /**

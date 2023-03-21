@@ -4,10 +4,6 @@ package Guia2_condicionales;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Silvana
- */
 public class Ejercicio6 {
 
     /**

@@ -16,28 +16,26 @@ public class Ejercicio16 {
         Scanner leer = new Scanner(System.in);
         System.out.println("ingrese tamaño del vector");
         int n = leer.nextInt();
-        int[] vector = new int[n];
+        int[] array = new int[n];
         
         for (int i = 0; i < n; i++) {
-          vector[i] = (int) (Math.random()*10+1);  
-            System.out.print(vector[i] + "/");
+          array[i] = (int) (Math.random()*10+1);  
+            System.out.print(array[i] + "/");
         }
-        System.out.print("\n");
-        System.out.println("que numero quiere buscar dentro del vector?");
+        System.out.println("\nque numero quiere buscar dentro del arreglo?");
         int num = leer.nextInt();
         int count = 0;
+        System.out.println("el numero " + num);
         for (int i = 0; i < n; i++) {
-            if (num == vector[i]) {
-                System.out.println("el numero se encuentra en la posicion");
-                System.out.println( i); 
+            if (num == array[i]) {
                 count = count + 1;
-                if (count == 0) {
-                    System.out.println("el numeo no esta");
+                System.out.println("se encuentra en la posicion " + i);
                 }
-            }
-            
         }
-       
+        System.out.println("se repite " + count + " veces");
+        if (count == 0) {
+             System.out.println("no pertenece al arreglo");
+            }
     }
 }
     

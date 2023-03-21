@@ -6,10 +6,6 @@ package Guia2_condicionales;
 
 import java.util.Scanner;
 
-/**
- *
- * @author sfappiano
- */
 public class Ejercicio1 {
 
     /**
@@ -21,11 +17,12 @@ public class Ejercicio1 {
        int num1 = leer.nextInt();
        int num2 = leer.nextInt();
        System.out.println("los numeros son " + num1 + " y " + num2);
-       if (num1 > num2){   
+        System.out.println(Math.max(num1, num2) );
+       /*if (num1 > num2){   
        System.out.println("el mayor es " + num1);
        } else if (num2 > num1) {
             System.out.println("el mayor es " + num2);
-        }
+        }*/
     }
     
 }
