@@ -29,9 +29,9 @@ public class Ejercicio12 {
          System.out.println("ingrese una cadena de 5 caracteres");
          cadena = leer.nextLine();
          if (cadena.length() == 5 && cadena.substring(0, 1).equals("X") && cadena.substring(4, 5).equals("O")){
-             countC = countC + 1;
+             ++countC;
          } else {
-             countI = countI + 1;
+            ++ countI;
          }   
        } while (!cadena.equals(FDE));
        System.out.println("mensajes correctos: " + countC + " \nmensajes incorrectos: " + (countI - 1));

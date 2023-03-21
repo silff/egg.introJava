@@ -28,7 +28,7 @@ public class Ejercicio16 {
         System.out.println("el numero " + num);
         for (int i = 0; i < n; i++) {
             if (num == array[i]) {
-                count = count + 1;
+                ++count;
                 System.out.println("se encuentra en la posicion " + i);
                 }
         }
