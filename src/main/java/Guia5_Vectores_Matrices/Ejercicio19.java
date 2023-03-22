@@ -43,7 +43,7 @@ public class Ejercicio19 {
         System.out.println("Matriz Transpuesta");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                matrizB[i] [j] = matrizA [i] [j];
+                matrizB[i] [j] = matrizA [i] [j] * (-1);
                 System.out.print("|" + matrizB[i] [j] + "|");
             }
             System.out.println(); 
@@ -61,7 +61,7 @@ public class Ejercicio19 {
                 }
             }
         }
-        if (count == n*n) {
+        if (count == n * n) {
             System.out.println("ES antisimetrica");  
         }else{
             System.out.println("No es antisimetrica");
