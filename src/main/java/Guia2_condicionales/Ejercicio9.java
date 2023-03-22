@@ -9,9 +9,7 @@ import java.util.Scanner;
 
 public class Ejercicio9 {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         System.out.println("escriba una frase o palabra");

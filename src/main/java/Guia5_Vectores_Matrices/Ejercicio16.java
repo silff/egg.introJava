@@ -6,10 +6,7 @@ package Guia5_Vectores_Matrices;
 
 import java.util.Scanner;
 
-/**
- *
- * @author sfappiano
- */
+
 public class Ejercicio16 {
 
     public static void main(String[] args) {

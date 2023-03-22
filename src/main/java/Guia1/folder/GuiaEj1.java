@@ -2,10 +2,7 @@
  */
 package Guia1.folder;
 
-/**
- *
- * @author sfappiano
- */
+
 public class GuiaEj1 {
 
     public static void main(String[] args) {

@@ -4,10 +4,7 @@ package Guia1;
 
 import java.util.Scanner;
 
-/**
- *
- * @author sfappiano
- */
+
 public class HelloWorld {
 
     public static void main(String[] args) {

@@ -12,10 +12,7 @@ package Guia4_Funciones;
 
 import java.util.Scanner;
 
-/**
- *
- * @author sfappiano
- */
+
 public class Ejercicio14 {
 
     public static void main(String[] args) {

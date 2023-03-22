@@ -6,10 +6,7 @@ package Guia1;
 
 import java.util.Scanner;
 
-/**
- *
- * @author sfappiano
- */
+
 public class Ejercicio4 {
 
     public static void main(String[] args) {
