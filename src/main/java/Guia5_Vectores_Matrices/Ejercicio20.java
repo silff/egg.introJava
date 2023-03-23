@@ -19,31 +19,44 @@ public class Ejercicio20 {
     }
     
     public static void llenarCuadrado(int cuadrado[][]) {
-        int num;
-        int aux = 0;
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                cuadrado[i] [j] = 0;
-            } 
-        }
         
         for (int i = 0; i < 3; i++) {
-          for (int j = 0; j < 3; j++) {
-            do {
-               System.out.println("ingrese un numero del 1 al 9 sin repetir");
-               num = leer.nextInt();
-                 if (num < 1 || num > 10) {
-                    System.out.println("fuera de rango");
-                 }else if (num != aux){
-                    aux = num;   
-                    cuadrado[i] [j] = aux;
-                 }else { 
-                     System.out.println("numero repetido");
-                     j = j - 1;
-                 }   
-            }while (num < 1 || num > 10);
+            for (int j = 0; j < 3; j++) {
+               cuadrado[i] [j] = 0; 
             }
-           } 
+        }
+        
+        int num;
+       
+        for (int i = 0; i < 3; i++) {
+          for (int j = 0; j < 3; j++) {
+            int k, l;
+            boolean repetido;
+            do {
+               do {
+                  System.out.println("Ingrese un número del 1 al 9 sin repetir:");
+                  num = leer.nextInt();
+                  if (num < 1 || num > 9) {
+                        System.out.println("Fuera de rango.");
+                    }
+                } while (num < 1 || num > 9);
+                repetido = false;
+                for (k = 0; k < 3; k++) {
+                    for (l = 0; l < 3; l++) {
+                        if (cuadrado[k][l] == num) {
+                            System.out.println("Número repetido.");
+                            repetido = true;
+                            break;
+                        }
+                    }
+                    if (repetido) {
+                        break;
+                    }
+                }
+            } while (repetido);
+            cuadrado[i][j] = num;
+           }
+        }
         }
     
     
