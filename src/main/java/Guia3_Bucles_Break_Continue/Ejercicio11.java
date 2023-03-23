@@ -38,19 +38,20 @@ public class Ejercicio11 {
               case 4 -> System.out.println(num1 / num2);
               case 5 -> {
                   System.out.println("esta seguro que desea salir del programa? (S/N)");
-                  String resp = leer.next();
-                  if (resp.equalsIgnoreCase("S")){
-                  break;
-              }else{
-                      opcion = 0;  
+                  String resp;
+                  do {
+                      resp = leer.next();
+                      if (resp.equalsIgnoreCase("N")){
+                      opcion = 0;
+                  } else if (resp.equalsIgnoreCase("S")) { 
+                      break;
+                  }else{
+                      System.out.println("debe responder S/N");  
                   }
-            }
-        }
-    }while (opcion != 5);
-}
-}
-
-            
-
-              
-
+                  } while (!resp.equalsIgnoreCase("N") || !resp.equalsIgnoreCase("S"));
+                }
+                default -> System.out.println("no es una opcion valida");
+                }
+            }while (opcion != 5);                   
+   }
+ }

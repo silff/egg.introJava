@@ -9,7 +9,7 @@ package Guia5_Vectores_Matrices;
 import java.util.Scanner;
 
 public class Ejercicio20 {
-    static Scanner leer = new Scanner(System.in);
+   static Scanner leer = new Scanner(System.in);
 
     public static void main(String[] args) {
         int [] [] cuadrado = new int [3] [3];
@@ -20,28 +20,34 @@ public class Ejercicio20 {
     
     public static void llenarCuadrado(int cuadrado[][]) {
         int num;
-        
+        int aux = 0;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 cuadrado[i] [j] = 0;
             } 
         }
         
-            for (int i = 0; i < 3; i++) {
-                for (int j = 0; j < 3; j++) {
-                do {
-                    System.out.println("ingrese un numero del 1 al 9 sin repetir");
-                    num = leer.nextInt(); 
-                       if (num < 1 || num > 10) {
-                           System.out.println("fuera de rango");
-                        }
-                        
-                    
-                } while (num < 1 || num > 10);
-                cuadrado[i] [j] = num;
+        for (int i = 0; i < 3; i++) {
+          for (int j = 0; j < 3; j++) {
+
+            do {
+               System.out.println("ingrese un numero del 1 al 9 sin repetir");
+               num = leer.nextInt();
+                 if (num < 1 || num > 10) {
+                    System.out.println("fuera de rango");
+                 }else if (num != aux){
+                    aux = num;   
+                    cuadrado[i] [j] = aux;
+                 }else { 
+                     System.out.println("numero repetido");
+                     j = j - 1;
+                 }   
+            }while (num < 1 || num > 10);
+            
             }
+           } 
         }
-    }
+    
     
     public static void mostrarCuadrado(int cuadrado[][]) {
         for (int i = 0; i < 3; i++) {
