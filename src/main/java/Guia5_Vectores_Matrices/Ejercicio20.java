@@ -15,7 +15,7 @@ public class Ejercicio20 {
         int [] [] cuadrado = new int [3] [3];
         llenarCuadrado(cuadrado);
         mostrarCuadrado(cuadrado);
-        
+        comprobar(cuadrado);
     }
     
     public static void llenarCuadrado(int cuadrado[][]) {
@@ -29,7 +29,6 @@ public class Ejercicio20 {
         
         for (int i = 0; i < 3; i++) {
           for (int j = 0; j < 3; j++) {
-
             do {
                System.out.println("ingrese un numero del 1 al 9 sin repetir");
                num = leer.nextInt();
@@ -43,7 +42,6 @@ public class Ejercicio20 {
                      j = j - 1;
                  }   
             }while (num < 1 || num > 10);
-            
             }
            } 
         }
@@ -58,8 +56,37 @@ public class Ejercicio20 {
         }
     }
     
-    public static void comprobar() {
+    public static void comprobar(int cuadrado[] []) {
+     int num = 15;
+     int fila = 0;
+     int columna = 0;
+     int diag = 0;
+        for (int i = 0; i < 3; i++) {
+            columna = columna + cuadrado[i] [0];
+             }  
+        System.out.println("columna 1 " + columna);
         
+        for (int j = 0; j < 3; j++) {
+            fila = fila + cuadrado[0] [j];
+        }
+        System.out.println("fila 1 " + fila);
+        
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (i == j) {
+                   diag = diag + cuadrado[i] [j]; 
+                }
+            }
+        }
+        System.out.println("digonal ppal " + diag);
+        if (diag == num && fila == num && columna == num) {
+            System.out.println("el cubo es magico");
+        }else {    
+            System.out.println("no es magico");
+        } 
     }
 }
+        
+    
+
 
