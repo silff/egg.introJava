@@ -14,7 +14,7 @@ package Guia5_Vectores_Matrices;
 public class Ejercicio21 {
 
     public static void main(String[] args) {
-        int n = 5;
+        int n = 10;
         int m = 3;
         int[][] matrizM = new int[n][n];
         int[][] matrizP = new int[m][m];
@@ -37,24 +37,22 @@ public class Ejercicio21 {
     }
 
     public static void compararMatrices(int mA[][], int mP[][], int x, int z) {
+
+        System.out.println("submatrices: " + (x - z + 1) * z);
+        System.out.println("submatriz P en: ");
         for (int i = 0; i <= x - z; i++) {
             for (int j = 0; j <= x - z; j++) {
-                
+
                 for (int k = 0; k < z; k++) {
                     for (int l = 0; l < z; l++) {
-                        System.out.println("submatrices " + (x - z+1) * z);
-                        if (mA[i + k][j + l] == mP[k][l]) {
-                            System.out.print("subM en ");
-                            System.out.print("[" + (i + k) + "][" + (j + l) + "]");
 
+                        if (mA[i + k][j + l] == mP[k][l]) {
+                            System.out.print((i + k) + ":" + (j + l) + " ");
                         }
-                        
                     }
                     System.out.println("");
                 }
-
             }
-
         }
     }
 }
