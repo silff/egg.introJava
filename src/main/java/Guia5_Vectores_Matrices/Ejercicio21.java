@@ -14,25 +14,47 @@ package Guia5_Vectores_Matrices;
 public class Ejercicio21 {
 
     public static void main(String[] args) {
-        int n = 10;
+        int n = 5;
         int m = 3;
-        int[] [] matrizM = new int[n] [n];
-        int[] [] matrizP = new int[m] [m];
-        
-        
+        int[][] matrizM = new int[n][n];
+        int[][] matrizP = new int[m][m];
+
         llenarMatriz(matrizM, n);
         llenarMatriz(matrizP, m);
+        compararMatrices(matrizM, matrizP, n, m);
     }
-    
-    public static void llenarMatriz(int matriz[] [], int x) {
-        
+
+    public static void llenarMatriz(int matriz[][], int x) {
+
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < x; j++) {
-                matriz[i] [j] = (int) (Math.random() * 99 + 1);
-                System.out.print("|" + matriz[i] [j] + "|");
+                matriz[i][j] = (int) (Math.random() * 99 + 1);
+                System.out.print("|" + matriz[i][j] + "|");
             }
             System.out.println();
         }
         System.out.println();
+    }
+
+    public static void compararMatrices(int mA[][], int mP[][], int x, int z) {
+        for (int i = 0; i <= x - z; i++) {
+            for (int j = 0; j <= x - z; j++) {
+                
+                for (int k = 0; k < z; k++) {
+                    for (int l = 0; l < z; l++) {
+                        System.out.println("submatrices " + (x - z+1) * z);
+                        if (mA[i + k][j + l] == mP[k][l]) {
+                            System.out.print("subM en ");
+                            System.out.print("[" + (i + k) + "][" + (j + l) + "]");
+
+                        }
+                        
+                    }
+                    System.out.println("");
+                }
+
+            }
+
+        }
     }
 }
