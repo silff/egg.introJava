@@ -42,8 +42,8 @@ public class Ejercicio7 {
                 System.out.println("el maximo es " + max);
                 System.out.println("el minimo es " + min);
                 System.out.println("el promedio es " + suma / aux);
-
                 break;
+                
             case "b":
 
                 System.out.println("determine la cantidad de numeros a ingresar");
@@ -60,7 +60,6 @@ public class Ejercicio7 {
                     if (num > max) {
                         max = num;
                     }
-
                     if (num < min) {
                         min = num;
                     }
@@ -69,11 +68,10 @@ public class Ejercicio7 {
                 System.out.println("el maximo es " + max);
                 System.out.println("el minimo es " + min);
                 System.out.println("el promedio es " + suma / aux);
-
                 break;
 
             default:
-                System.out.println("ingrese una opcion valida");
+                System.out.println("opcion no valida");
         }
     }
 }
