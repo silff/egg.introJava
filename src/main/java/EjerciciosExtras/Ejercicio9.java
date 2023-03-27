@@ -19,10 +19,10 @@ public class Ejercicio9 {
         
         Scanner leer = new Scanner(System.in);
         int num1, num2;
+        
         do {
            System.out.println("ingrese un numero entero mayor a 1"); 
-           num1 = leer.nextInt();
-           
+           num1 = leer.nextInt();   
         } while (num1 < 1);
        
         
