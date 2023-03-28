@@ -30,3 +30,4 @@ public class Ejercicio12 {
         }
     } 
 }
+/* ver java StringBuilder.append()*/
