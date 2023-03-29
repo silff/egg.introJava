@@ -17,9 +17,9 @@ public class Ejercicio15 {
         int retorno2 = validarEntero();
         int opcion;
         do {
-        System.out.println("ingrese una opcion:\n MENU\n1. Sumar\n2. Restar\n3. Multiplicar\n4. Dividir\n5. Salir");
-        opcion = leer.nextInt();
-       
+            System.out.println("ingrese una opcion:\n MENU\n1. Sumar\n2. Restar\n3. Multiplicar\n4. Dividir\n5. Salir");
+            opcion = leer.nextInt();
+
             switch (opcion) {
                 case 1:
                     int suma = sumar(retorno1, retorno2);
@@ -43,7 +43,7 @@ public class Ejercicio15 {
                     System.out.println("no es una opcion valida");
 
             }
-       } while (opcion != 5);
+        } while (opcion != 5);
 
     }
 
