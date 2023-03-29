@@ -11,8 +11,7 @@ public class Ejercicio6 {
 
         Scanner leer = new Scanner(System.in);
         int count = 0;
-        double suma = 0;
-        double suma2 = 0;
+        double suma = 0, suma2 = 0;
         System.out.println("ingrese la cantidad de personas a promediar");
         int n = leer.nextInt();
         for (int i = 0; i < n; i++) {
@@ -22,10 +21,10 @@ public class Ejercicio6 {
                 altura = leer.nextDouble();
             } while (altura < 0.5 || altura > 2.5);
 
-            suma = suma + altura;
+            suma += altura;
             if (altura < 1.6) {
                 count++;
-                suma2 = suma2 + altura;
+                suma2 += altura;
             }
         }
         System.out.println("promedio gral = " + suma / n);

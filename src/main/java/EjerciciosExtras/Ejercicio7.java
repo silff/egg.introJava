@@ -20,16 +20,16 @@ public class Ejercicio7 {
             case "a":
                 System.out.println("determine la cantidad de numeros a ingresar");
                 int n = leer.nextInt();
-                int max = 0;
-                int min = 999999999;
+                int max = 0,
+                 min = 999999999,
+                 aux = n;
                 double suma = 0;
-                int aux = n;
 
                 while (n > 0) {
                     System.out.println("ingrese un numero");
                     int num = leer.nextInt();
 
-                    suma = suma + num;
+                    suma += num;
                     if (num > max) {
                         max = num;
                     }
@@ -43,7 +43,7 @@ public class Ejercicio7 {
                 System.out.println("el minimo es " + min);
                 System.out.println("el promedio es " + suma / aux);
                 break;
-                
+
             case "b":
 
                 System.out.println("determine la cantidad de numeros a ingresar");
@@ -56,7 +56,7 @@ public class Ejercicio7 {
                     System.out.println("ingrese un numero");
                     int num = leer.nextInt();
 
-                    suma = suma + num;
+                    suma += num;
                     if (num > max) {
                         max = num;
                     }

@@ -12,11 +12,8 @@ public class Ejercicio8 {
     public static void main(String[] args) {
 
         Scanner leer = new Scanner(System.in);
-        int num;
-        int count = 0;
-        int pares = 0;
-        int impares = 0;
-        int negativos = 0;
+        int num, count = 0, pares = 0,  impares = 0, negativos = 0;
+       
         do {
             
             System.out.println("ingrese un numero");

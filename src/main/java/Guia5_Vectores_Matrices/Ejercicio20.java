@@ -70,24 +70,22 @@ public class Ejercicio20 {
     }
 
     public static void comprobar(int cuadrado[][]) {
-        int num = 15;
-        int fila = 0;
-        int columna = 0;
-        int diag = 0;
+        int num = 15, fila = 0, columna = 0, diag = 0;
+
         for (int i = 0; i < 3; i++) {
-            columna = columna + cuadrado[i][0];
+            columna += cuadrado[i][0];
         }
         System.out.println("columna 1 " + columna);
 
         for (int j = 0; j < 3; j++) {
-            fila = fila + cuadrado[0][j];
+            fila += cuadrado[0][j];
         }
         System.out.println("fila 1 " + fila);
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (i == j) {
-                    diag = diag + cuadrado[i][j];
+                    diag += cuadrado[i][j];
                 }
             }
         }
@@ -99,7 +97,3 @@ public class Ejercicio20 {
         }
     }
 }
-        
-    
-
-
