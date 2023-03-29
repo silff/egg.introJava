@@ -23,7 +23,7 @@ public class Ejercicio2 {
         C = A;           //c = a
         A = D;           //a = d
         D = aux;         //d = b
-        System.out.println("B = " + B + "\nC = " + C + "\nA = " + A + "\nD = " + D);
+        System.out.println("A = " + A + "\nB = " + B + "\nC = " + C + "\nD = " + D);
     }
     
 }

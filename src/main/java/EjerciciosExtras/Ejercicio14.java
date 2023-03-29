@@ -20,7 +20,7 @@ public class Ejercicio14 {
             for (int j = 0; j < hijos; j++) {
                 System.out.println("edad hijo n° " + (j + 1));
                 int edad = leer.nextInt();
-                suma = suma + edad;
+                suma += edad;
                 count++;
             }
         }
