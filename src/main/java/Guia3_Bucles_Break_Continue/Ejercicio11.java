@@ -18,40 +18,59 @@ package Guia3_Bucles_Break_Continue;
 
 import java.util.Scanner;
 
-
 public class Ejercicio11 {
 
     public static void main(String[] args) {
-      Scanner leer = new Scanner(System.in);
-     
-        System.out.println("ingrese dos numeros enteros");
-          int num1 = leer.nextInt();
-          int num2 = leer.nextInt();
-          int opcion;
-          do {
-          System.out.println("ingrese una opcion:\n MENU\n1. Sumar\n2. Restar\n3. Multiplicar\n4. Dividir\n5. Salir");         
-           opcion = leer.nextInt();
-          switch (opcion){
-              case 1 -> System.out.println(num1 + num2);
-              case 2 -> System.out.println(num1 - num2);
-              case 3 -> System.out.println(num1 * num2);
-              case 4 -> System.out.println(num1 / num2);
-              case 5 -> {
-                  System.out.println("esta seguro que desea salir del programa? (S/N)");
-                  String resp;
-                  do {
-                      resp = leer.next();
-                      if (resp.equalsIgnoreCase("N")){
-                      opcion = 0;
-                  } else if (resp.equalsIgnoreCase("S")) { 
-                      break;
-                  }else{
-                      System.out.println("debe responder S/N");  
-                  }
-                  } while (!resp.equalsIgnoreCase("N") || !resp.equalsIgnoreCase("S"));
+        Scanner leer = new Scanner(System.in);
+        int num1, num2;
+
+        System.out.println("ingrese un numeros enteros");
+
+        while (!leer.hasNextInt()) {
+            System.out.println("no es un entero");
+            leer.next();
+        }
+        num1 = leer.nextInt();
+
+        System.out.println("ingrese otro numeros enteros");
+
+        while (!leer.hasNextInt()) {
+            System.out.println("no es un entero");
+            leer.next();
+        }
+
+        num2 = leer.nextInt();
+
+        int opcion;
+        do {
+            System.out.println("ingrese una opcion:\n MENU\n1. Sumar\n2. Restar\n3. Multiplicar\n4. Dividir\n5. Salir");
+            opcion = leer.nextInt();
+            switch (opcion) {
+                case 1 ->
+                    System.out.println(num1 + num2);
+                case 2 ->
+                    System.out.println(num1 - num2);
+                case 3 ->
+                    System.out.println(num1 * num2);
+                case 4 ->
+                    System.out.println((double) num1 / (double) num2);
+                case 5 -> {
+                    System.out.println("esta seguro que desea salir del programa? (S/N)");
+                    String resp;
+                    do {
+                        resp = leer.next();
+                        if (resp.equalsIgnoreCase("N")) {
+                            opcion = 0;
+                        } else if (resp.equalsIgnoreCase("S")) {
+                            break;
+                        } else {
+                            System.out.println("debe responder S/N");
+                        }
+                    } while (!resp.equalsIgnoreCase("N") || !resp.equalsIgnoreCase("S"));
                 }
-                default -> System.out.println("no es una opcion valida");
-                }
-            }while (opcion != 5);                   
-   }
- }
+                default ->
+                    System.out.println("no es una opcion valida");
+            }
+        } while (opcion != 5);
+    }
+}
