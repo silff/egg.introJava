@@ -13,11 +13,8 @@ public class Ejercicio17 {
         System.out.println("ingrese tamaño del vector");
         int n = leer.nextInt();
         int[] vector = new int[n];
-        int count1 = 0;
-        int count2 = 0;
-        int count3 = 0;
-        int count4 = 0;
-        int count5 = 0;
+        int count1 = 0, count2 = 0, count3 = 0, count4 = 0, count5 = 0;
+       
         for (int i = 0; i < n; i++) {
           vector[i] = (int) (Math.random()*99999);  
           System.out.print(vector[i] + "/");

@@ -7,20 +7,17 @@ import java.util.Scanner;
 
 public class Ejercicio10 {
 
-  
     public static void main(String[] args) {
-       Scanner leer = new Scanner(System.in);
-       int limite = 100;
-       System.out.println("el limite es " + limite);
+        Scanner leer = new Scanner(System.in);
+        int limite = 100;
+        System.out.println("el limite es " + limite);
         int suma = 0;
-       do {
-           System.out.println("ingrese un numero");
-           int num = leer.nextInt();
-          
-           suma = suma + num;
-       }
-         while (suma <= limite);  
-       
+        do {
+            System.out.println("ingrese un numero");
+            suma += leer.nextInt();
+        } while (suma <= limite);
+        System.out.println(suma);
+
     }
-    
+
 }
