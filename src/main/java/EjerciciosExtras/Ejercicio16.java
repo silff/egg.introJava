@@ -36,7 +36,6 @@ public class Ejercicio16 {
             System.out.println("nombre de persona n° " + (i + 1));
             nombre[i] = leer.next();
             System.out.println("edad");
-
             edad[i] = leer.nextInt();
 
         }
@@ -51,7 +50,7 @@ public class Ejercicio16 {
             } else {
                 System.out.println("Mayor de edad");
             }
-            System.out.println("siguiente?");
+            System.out.println("siguiente? - para terminar digite NO");
             String sig = leer.next();
             if (sig.equalsIgnoreCase("NO")) {
                 break;
