@@ -14,18 +14,25 @@ public class Ejercicio16 {
 
     public static void main(String[] args) {
         System.out.println("cuantas personas?");
-        int personas = leer.nextInt();
-        do {            
-            
-        } while (true);
+        int n = leer.nextInt();
+        String[] nombre = new String[n];
+        pedirNombre(nombre, n);
+
     }
 
-    public static void pedirNombre(int personas ) {
-        
-        for (int i = 0; i < personas; i++) {
+    public static void pedirNombre(String[] nombre, int n) {
+
+        for (int i = 0; i < n; i++) {
             System.out.println("nombre de persona n° " + (i + 1));
-            String nombre = leer.nextLine();
+            nombre[i] = leer.next();
+            System.out.println("edad");
+            int[] edad = new int[n];
+            edad[i] = leer.nextInt();
+
         }
     }
-
 }
+
+// public static void mostrarDatos() {
+//}
+
