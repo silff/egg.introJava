@@ -12,19 +12,26 @@ import java.util.Scanner;
 public class Ejercicio17 {
 
     public static void main(String[] args) {
-        
+
         Scanner leer = new Scanner(System.in);
+        System.out.println("ingrese un numero");
         int num = leer.nextInt();
-        boolean nPrimo = primo(num);
+        boolean esPrimo = primo(num);
+        System.out.println("es primo? " + esPrimo);
     }
-    
+
     public static boolean primo(int n) {
-        boolean esPrimo = true;
-        
-        if (true ) {
-            
-        }
-        
+        boolean esPrimo;
+        int count = 0;
+        if (n == 0 || n == 1) {
+            esPrimo = false;
+        } 
+        for (int i = 2; i <= n; i++) {
+            if (n % i == 0) {
+                count++;
+            }
+        }   
+        esPrimo = count == 1;
         return esPrimo;
     }
 }
