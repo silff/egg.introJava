@@ -15,24 +15,48 @@ public class Ejercicio16 {
     public static void main(String[] args) {
         System.out.println("cuantas personas?");
         int n = leer.nextInt();
+        int[] edad = new int[n];
         String[] nombre = new String[n];
-        pedirNombre(nombre, n);
+
+        pedirNombre(nombre, edad, n);
+
+        System.out.println("mostar datos?");
+        String answ = leer.next();
+        if (answ.equalsIgnoreCase("SI")) {
+            mostrarDatos(nombre, edad, n);
+        } else {
+            System.out.println("adios");
+        }
 
     }
 
-    public static void pedirNombre(String[] nombre, int n) {
+    public static void pedirNombre(String[] nombre, int[] edad, int n) {
 
         for (int i = 0; i < n; i++) {
             System.out.println("nombre de persona n° " + (i + 1));
             nombre[i] = leer.next();
             System.out.println("edad");
-            int[] edad = new int[n];
+
             edad[i] = leer.nextInt();
 
         }
     }
+
+    public static void mostrarDatos(String[] nombre, int[] edad, int n) {
+
+        for (int i = 0; i < n; i++) {
+            System.out.println(nombre[i] + ": " + edad[i]);
+            if (edad[i] < 18) {
+                System.out.println("Menor de edad");
+            } else {
+                System.out.println("Mayor de edad");
+            }
+            System.out.println("siguiente?");
+            String sig = leer.next();
+            if (sig.equalsIgnoreCase("NO")) {
+                break;
+            } else {
+            }
+        }
+    }
 }
-
-// public static void mostrarDatos() {
-//}
-
