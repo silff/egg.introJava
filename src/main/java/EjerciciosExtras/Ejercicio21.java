@@ -14,11 +14,54 @@ igual al 7 de sus notas del curso
  */
 package EjerciciosExtras;
 
+import java.util.Scanner;
+
 public class Ejercicio21 {
 
+    static Scanner leer = new Scanner(System.in);
+
     public static void main(String[] args) {
-       
-        
+
+        int n = 2; //cantidad de alumnos
+        String[] examen = {"tp1", "tp2", "parcial1", "parcial2"};
+        int[] alumnos = new int[n];
+        double[][] notas = new double[n] [examen.length];
+        double[] promPyT = new double[examen.length + 1];
+
+        cargarDatos(examen, alumnos, notas, promPyT, n);
+        mostrarDatos(examen, alumnos, notas, promPyT, n);
     }
+
+    public static void cargarDatos(String[] examen, int [] alumnos, double[][] notas, double[] promPyT, int n) {
+      
+        for (int i = 0; i < n; i++) {
+            alumnos[i] = i + 1;
+        }
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < examen.length; j++) {
+                System.out.println("ingresar nota " + examen[j] + " del alumno n° " + alumnos[i]);
+                        notas [i] [j] = leer.nextDouble();                 
+                }
+            }
+        for (int i = 0; i < n; i++) {
+            promPyT[i] = notas[i][0] * 0.1;
+        }
+        }
+
     
+
+    public static void mostrarDatos(String[] examen, int [] alumnos, double[][] notas, double[] promPyT, int n) {
+        
+        for (int i = 0; i < n; i++) {
+             System.out.print("notas alumno " + alumnos[i] );
+             System.out.println("");
+            for (int j = 0; j < examen.length; j++) {
+                System.out.print(notas[i][j] + " ");
+            }
+            System.out.println("");
+        }
+        for (int i = 0; i < n; i++) {
+            System.out.println(promPyT[i]);
+        }
+    }
 }
