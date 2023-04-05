@@ -22,46 +22,28 @@ public class Ejercicio21 {
 
     public static void main(String[] args) {
 
-        int n = 2; //cantidad de alumnos
-        String[] examen = {"tp1", "tp2", "parcial1", "parcial2"};
-        int[] alumnos = new int[n];
-        double[][] notas = new double[n] [examen.length];
-        double[] promPyT = new double[examen.length + 1];
+        int aprobados = 0, desaprobados = 0, n = 3;
+        double[] promedios = new double[n];
 
-        cargarDatos(examen, alumnos, notas, promPyT, n);
-        mostrarDatos(examen, alumnos, notas, promPyT, n);
-    }
-
-    public static void cargarDatos(String[] examen, int [] alumnos, double[][] notas, double[] promPyT, int n) {
-      
         for (int i = 0; i < n; i++) {
-            alumnos[i] = i + 1;
-        }
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < examen.length; j++) {
-                System.out.println("ingresar nota " + examen[j] + " del alumno n° " + alumnos[i]);
-                        notas [i] [j] = leer.nextDouble();                 
-                }
+            System.out.println("ingrese notas de alumno " + (i + 1));
+            double nota1 = leer.nextDouble();
+            double nota2 = leer.nextDouble();
+            double nota3 = leer.nextDouble();
+            double nota4 = leer.nextDouble();
+            double promedio = nota1 * 0.1 + nota2 * 0.15 + nota3 * 0.25 + nota4 * 0.5;
+            promedios[i] = promedio;
+            if (promedio >=7) {
+                aprobados++;
+            }else {
+                desaprobados++;
             }
-        for (int i = 0; i < n; i++) {
-            promPyT[i] = notas[i][0] * 0.1;
         }
+        System.out.println("promedios");
+        for (double promedio : promedios) {
+            System.out.println(promedio);
         }
-
-    
-
-    public static void mostrarDatos(String[] examen, int [] alumnos, double[][] notas, double[] promPyT, int n) {
-        
-        for (int i = 0; i < n; i++) {
-             System.out.print("notas alumno " + alumnos[i] );
-             System.out.println("");
-            for (int j = 0; j < examen.length; j++) {
-                System.out.print(notas[i][j] + " ");
-            }
-            System.out.println("");
-        }
-        for (int i = 0; i < n; i++) {
-            System.out.println(promPyT[i]);
-        }
+        System.out.println("Aprobados: " + aprobados);
+        System.out.println("Desaprobados: " + desaprobados);
     }
 }
