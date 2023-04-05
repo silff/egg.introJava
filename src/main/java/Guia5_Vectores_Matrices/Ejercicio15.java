@@ -8,11 +8,18 @@ public class Ejercicio15 {
     public static void main(String[] args) {
         int[] vector = new int[100];
        
+        // primera opcion
         for (int i = 0; i < 100; i++) {
             vector[i] = 100 - i;
         }
         for (int elemento: vector) {
             System.out.print(elemento + " | ");
+        }
+        System.out.println("");
+        //segunda opcion
+         for (int i = 0; i < 100; i++) {
+            vector[i] = 100 - i;
+             System.out.print(vector[i] + " | ");
         }
     }
 

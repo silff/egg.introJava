@@ -9,67 +9,63 @@ package Guia5_Vectores_Matrices;
 public class Ejercicio19 {
 
     public static void main(String[] args) {
-       int n = 3;
-       int[] [] matrizA = new int[n] [n]; 
-       int[] [] matrizB = new int[n] [n]; 
-       llenarMatrizA(matrizA, n);
-       mostrarMatrizA(matrizA, n);
-         System.out.println();
-       transponerMatriz(matrizA, matrizB, n);
+        int n = 3;
+        int[][] matrizA = new int[n][n];
+        int[][] matrizB = new int[n][n];
+        llenarMatrizA(matrizA, n);
+        mostrarMatrizA(matrizA, n);
         System.out.println();
-       comprobarAntiSimetrica(matrizA, matrizB, n);
+        transponerMatriz(matrizA, matrizB, n);
+        System.out.println();
+        comprobarAntiSimetrica(matrizA, matrizB, n);
     }
-    
-    public static void llenarMatrizA(int matrizA[] [], int n){
-        
+
+    public static void llenarMatrizA(int mA[][], int n) {
+
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                matrizA[i] [j] = (int) (Math.random() * 20 -10);
-            }   
+                mA[i][j] = (int) (Math.random() * 20 - 10);
+            }
         }
     }
-    
-    public static void mostrarMatrizA(int matrizA[] [],int n){
+
+    public static void mostrarMatrizA(int matrizA[][], int n) {
         System.out.println("Matriz");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                System.out.print("|" + matrizA[i] [j] + "|");
+                System.out.print("|" + matrizA[i][j] + "|");
             }
-            System.out.println(); 
+            System.out.println();
         }
     }
-    
-     public static void transponerMatriz(int matrizA[] [], int matrizB[] [], int n){
+
+    public static void transponerMatriz(int matrizA[][], int matrizB[][], int n) {
         System.out.println("Matriz Transpuesta");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                matrizB[i] [j] = matrizA [i] [j] * (-1);
-                System.out.print("|" + matrizB[i] [j] + "|");
+                //matrizB[i][j] = (int) (Math.random() * 20 -10); //NO es 
+                matrizB[i][j] = matrizA[i][j] * (-1);               // ES
+                System.out.print("|" + matrizB[i][j] + "|");
             }
-            System.out.println(); 
+            System.out.println();
         }
     }
-    
-    public static void comprobarAntiSimetrica(int matrizA[] [], int matrizB[] [], int n){
-       int count = 0;
-       for (int i = 0; i < n; i++) {
+
+    public static void comprobarAntiSimetrica(int matrizA[][], int matrizB[][], int n) {
+        int count = 0;
+        for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if (matrizA[i] [j] != matrizB [i] [j] * (-1)) {
-                    break; 
-                }else{
+                if (matrizA[i][j] != matrizB[i][j] * (-1)) {
+                    break;
+                } else {
                     ++count;
                 }
             }
         }
         if (count == n * n) {
-            System.out.println("ES antisimetrica");  
-        }else{
+            System.out.println("ES antisimetrica");
+        } else {
             System.out.println("No es antisimetrica");
         }
     }
-}  
-           
-
-         
-    
-
+}

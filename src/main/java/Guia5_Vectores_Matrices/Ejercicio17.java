@@ -35,6 +35,5 @@ public class Ejercicio17 {
                + "\nnumeros de 3 digitos: " + count3
                + "\nnumeros de 4 digitos: " + count4
                + "\nnumeros de 5 digitos: " + count5);
-    }
-    
+    } 
 }
