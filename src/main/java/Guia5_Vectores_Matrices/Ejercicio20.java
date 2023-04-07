@@ -13,13 +13,16 @@ public class Ejercicio20 {
     static Scanner leer = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int[][] cuadrado = new int[3][3];
-        llenarCuadrado(cuadrado);
-        mostrarCuadrado(cuadrado);
-        comprobar(cuadrado);
+        System.out.println("ingrese tamaño del cuadraso");
+        int n = leer.nextInt();
+        int[][] cuadrado = new int[n][n];
+        llenarCuadrado(cuadrado, n);
+        mostrarCuadrado(cuadrado, n);
+        comprobar(cuadrado, n);
     }
 
-    public static void llenarCuadrado(int cuadrado[][]) {
+    //primera version 3x3 
+    /*public static void llenarCuadrado(int cuadrado[][]) {
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -95,5 +98,74 @@ public class Ejercicio20 {
         } else {
             System.out.println("no es magico");
         }
+    } */
+    //segunda version nxn
+    public static void llenarCuadrado(int cuadrado[][], int n) {
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                int num;
+                do {
+                    System.out.println("ingrese un numero del 1 al 9");
+                    num = leer.nextInt();
+                    if (num < 1 || num > 9) {
+                        System.out.println("Fuera de rango.");
+                    }
+                } while (num < 1 || num > 9);
+                cuadrado[i][j] = num;
+            }
+        }
     }
+
+    public static void mostrarCuadrado(int cuadrado[][], int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print("|" + cuadrado[i][j] + "|");
+            }
+            System.out.println("");
+        }
+    }
+
+    public static void comprobar(int cuadrado[][], int n) {
+        int fila1 = 0;
+        //sumar una fila
+        for (int j = 0; j < n; j++) {
+            fila1 += cuadrado[0][j];
+        }
+        //comprobar filas
+        for (int i = 1; i < n; i++) {
+            int filas = 0;
+            for (int j = 0; j < n; j++) {
+                filas += cuadrado[i][j];
+            }
+            if (filas != fila1) {
+                System.out.println("no es magico");
+                return;
+            }
+        }
+        //comprobar columnas
+        for (int i = 0; i < n; i++) {
+            int columnas = 0;
+            for (int j = 0; j < n; j++) {
+                columnas += cuadrado[j][i];
+            }
+            if (columnas != fila1) {
+                System.out.println("no es magico");
+                return;
+            }
+        }
+        //comprobar diagonales
+        int diag1 = 0, diag2 = 0;
+        for (int i = 0; i < n; i++) {
+            diag1 += cuadrado[i][i];
+            diag2 += cuadrado[i][n - i - 1];
+        }
+        if (diag1 != fila1 || diag2 != fila1) {
+                System.out.println("no es magico");
+                return;
+            }
+
+        System.out.println("es magico");
+    }
+
 }
