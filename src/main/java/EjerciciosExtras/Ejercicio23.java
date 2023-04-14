@@ -51,9 +51,8 @@ public class Ejercicio23 {
         }
     }
 
-    @SuppressWarnings("empty-statement")
     public static void sopa(String p, String[][] s, int n) {
-        boolean repetido;
+        boolean repetido = false;
         do {
 
             int x = 0;
@@ -69,12 +68,13 @@ public class Ejercicio23 {
                         s[k][m] = p.substring(x, x + 1);
                         x++;
                     }
-                } else {
+                } else if (!s[k][j].equals(" ")) {
                     repetido = true;
                     break;
                 }
+
             }
-        } while (repetido = false);
+        } while (repetido = true);
     }
 
     public static void mostrarSopa(String[][] s, int n) {
